@@ -1,9 +1,11 @@
 <html>
  <head>
 	<script type="text/javascript" src="./js/script.js"></script>	
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<title>IBM Flickr Code Challenge </title>
  </head>
  <body onload="loadData()">
 		<nav class="navbar navbar-inverse">
@@ -14,7 +16,7 @@
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
       				</button>
-					<a class="navbar-brand" href="#">IBM Flickr Code Challenge</a>
+					<a class="navbar-brand" href="#" onclick="loadData()">IBM Flickr Code Challenge</a>
     			</div>
 	  		</div>
 		</nav>
@@ -26,9 +28,9 @@
       			</div>
 				<div class="col-lg-9 pull-right">
 					<div class="input-group pull-right" style="width:300px">
-				      	<input type="text" class="form-control" placeholder="Search for...">
-				        <span class="input-group-btn">
-							<button class="btn btn-default" type="button">Go!</button>
+				      	<input type="text" class="form-control" placeholder="Search for..." id="search-str">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="button" onclick="searchImages(1)">Go!</button>
 						</span>
 					</div> 
 				</div>
@@ -36,8 +38,7 @@
 		  	<div class="row" id="images">
   			</div>
 		</div> 
-		<div  id="pagination">
-		
+		<div class="row" id="pagination">
 		</div>	
  </body>
  
