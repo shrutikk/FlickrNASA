@@ -26,6 +26,7 @@ function loadData(){
 				li.appendChild(link);
 				ul.appendChild(li);
 			}
+			document.getElementById('pagination').innerHTML = ' ';
 			document.getElementById('pagination').appendChild(ul);
 			
 		}
@@ -119,7 +120,8 @@ function loadSearchPage(imageData, page_no){
 
 function searchImages(pg_no){
 
-	var searchStr = document.getElementById('search-str').value;	
+	var searchStr = document.getElementById('search-str').value;
+	searchStr = searchStr.split(" ").join(",");	
 	var searchPicsReq = new XMLHttpRequest();
 	var url = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=a5e95177da353f58113fd60296e1d250&user_id=24662369@N07&tags="+searchStr+"&page="+pg_no+"&per_page=102&format=json&nojsoncallback=1";
 	
