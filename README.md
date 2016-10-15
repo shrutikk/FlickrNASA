@@ -1,4 +1,4 @@
-# IBM_Code
+# Using Flickr API 
 
 * This application consists of a gallery for images from the Flickr API. Each page has 102 images (number chosen at random).
 * Pagination is implemented to decrease page load time. 
